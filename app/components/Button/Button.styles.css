@@ -1,0 +1,169 @@
+.my-button {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: 52px;
+
+  border: none;
+  background-color: transparent;
+
+  font-family: erbaum, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.95);
+
+  transition: all 0.15s linear;
+}
+
+.my-button > div {
+  position: relative;
+  z-index: 3;
+}
+
+.my-button::after,
+.my-button::before {
+  content: "";
+  display: block;
+  height: 196px;
+  position: absolute;
+  left: 49%;
+  top: 51%;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s linear;
+  pointer-events: none;
+}
+
+.my-button::before {
+  z-index: 1;
+  opacity: 1;
+}
+
+.my-button::after {
+  z-index: 2;
+  opacity: 0;
+}
+
+.my-button:hover::before {
+  opacity: 0;
+}
+
+.my-button:hover::after {
+  opacity: 1;
+}
+
+.my-button_size_xs {
+  width: 174px;
+}
+
+.my-button_size_xs::before,
+.my-button_size_xs::after {
+  width: 314px;
+}
+
+.my-button_size_xs::before {
+  background-image: url("/images/button/button-174-passive.svg");
+}
+
+.my-button_size_xs::after {
+  background-image: url("/images/button/button-174-hover.svg");
+}
+
+.my-button_size_sm {
+  width: 190px;
+}
+
+.my-button_size_sm::before,
+.my-button_size_sm::after {
+  width: 330px;
+}
+
+.my-button_size_sm::before {
+  background-image: url("/images/button/button-190-passive.svg");
+}
+
+.my-button_size_sm::after {
+  background-image: url("/images/button/button-190-hover.svg");
+}
+
+.my-button_size_md {
+  width: 204px;
+}
+
+.my-button_size_md::before,
+.my-button_size_md::after {
+  width: 342px;
+}
+
+.my-button_size_md::before {
+  background-image: url("/images/button/button-204-passive.svg");
+}
+
+.my-button_size_md::after {
+  background-image: url("/images/button/button-204-hover.svg");
+}
+
+.my-button_size_lg {
+  width: 224px;
+}
+
+.my-button_size_lg::before,
+.my-button_size_lg::after {
+  width: 362px;
+}
+
+.my-button_size_lg::before {
+  background-image: url("/images/button/button-224-passive.svg");
+}
+
+.my-button_size_lg::after {
+  background-image: url("/images/button/button-224-hover.svg");
+}
+
+.my-button_size_xl {
+  width: 300px;
+}
+
+.my-button_size_xl::before,
+.my-button_size_xl::after {
+  width: 440px;
+}
+
+.my-button_size_xl::before {
+  background-image: url("/images/button/button-300-passive.svg");
+}
+
+.my-button_size_xl::after {
+  background-image: url("/images/button/button-300-hover.svg");
+}
+
+.my-button_size_xxl {
+  width: 390px;
+  height: 79px;
+}
+
+.my-button_size_xxl::before,
+.my-button_size_xxl::after {
+  left: 50%;
+  top: 54%;
+  width: 538px;
+  height: 224px;
+}
+
+.my-button_size_xxl::before {
+  background-image: url("/images/button/button-390-passive.svg");
+}
+
+.my-button_size_xxl::after {
+  background-image: url("/images/button/button-390-hover.svg");
+}
